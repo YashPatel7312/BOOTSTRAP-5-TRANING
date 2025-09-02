@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planet1 Orbit with Moon</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .galaxy {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("galaxy.jpg");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sun {
+      width: 120px;
+      height: 120px;
+      background: url("pl3.png");
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 10;
+    }
+
+    .orbit {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .orbit.earth {
+      width: 620px;
+      height: 620px;
+      animation: rotate 20s linear infinite;
+    }
+
+    .orbit.jupiter {
+      width: 400px;
+      height: 400px;
+      animation: rotate 10s linear infinite;
+    }
+
+    .planet1 {
+      width: 50px;
+      height: 50px;
+      background-image: url("pl1.png");
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .planet2 {
+      width: 50px;
+      height: 50px;
+      background-image: url("pl2.png");
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    /* New Orbit Around Planet1 */
+    .planet1-orbit-container {
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      animation: rotate 20s linear infinite;
+    }
+
+    .planet1-with-moon {
+      width: 50px;
+      height: 50px;
+      background-image: url("pl1.png");
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .moon-orbit {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: -25px;
+      left: -25px;
+      border-radius: 50%;
+      animation: rotate 5s linear infinite;
+    }
+
+    .moon {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="galaxy">
+    <div class="sun"></div>
+    <div class="orbit earth">
+      <div class="planet1"></div>
+    </div>
+    <div class="orbit jupiter">
+      <div class="planet2"></div>
+    </div>
+    <div class="planet1-orbit-container">
+      <div class="planet1-with-moon">
+        <div class="moon-orbit">
+          <div class="moon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

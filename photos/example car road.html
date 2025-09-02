@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Animation</title>
+  <style>
+    body {
+      margin: 0;
+      background: #87ceeb; /* sky blue */
+      overflow: hidden;
+    }
+
+    .road {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      background: #555;
+      top: 200px;
+    }
+
+    .car {
+      width: 100px;
+      height: 50px;
+      background: red;
+      position: absolute;
+      top: 25px;
+      left: -120px; /* Start off screen */
+      border-radius: 10px;
+      animation: moveCar 5s linear infinite;
+    }
+
+    @keyframes moveCar {
+      0% {
+        left: -120px;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    .wheel {
+      width: 20px;
+      height: 20px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      animation: spin 1s linear infinite;
+    }
+
+    .wheel.front {
+      left: 15px;
+    }
+
+    .wheel.back {
+      right: 15px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="road">
+    <div class="car">
+      <div class="wheel front"></div>
+      <div class="wheel back"></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+        <title>use grid and flex with india web page</title>
+</head>
+<style>
+        * {
+                box-sizing: border-box;
+        }
+
+        .grid-body {
+                display: grid;
+                grid-template-areas:
+                        'header header header header header header'
+                        'menu main main main main right'
+                        'footer footer footer footer footer footer';
+                gap: 20px;
+                background-color: white;
+                padding: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .grid-body>div {
+                padding: 10px;
+        }
+
+        .p1 {
+                grid-area: header;
+                background-color: purple;
+                color: white;
+                font-size: 20px;
+        }
+
+        .p2 {
+                grid-area: menu;
+        }
+
+        .p2 ul {
+                list-style-type: none;
+                font-size: 20px;
+        }
+
+        .p2 li {
+                padding: 10px;
+                margin-bottom: 30px;
+                background-color: aqua;
+                color: black;
+        }
+
+        .p2 li:hover {
+                color: white;
+                font-weight: bolder;
+        }
+
+        .p3 {
+                grid-area: main;
+        }
+
+        .p3>h1 {
+                font-size: 40px;
+                !important padding-bottom: 20px;
+        }
+
+        .p3>p {
+                font-size: 20px;
+        }
+
+        .p4 {
+                grid-area: right;
+                background-color: aqua;
+        }
+
+        .p4>ul {
+                padding: 20px;
+                font-size: 20px;
+        }
+
+        .p4 li {
+                margin-bottom: 20px;
+        }
+
+        .p5 {
+                grid-area: footer;
+                background-color: aqua;
+        }
+
+        @media only screen and (max-width:800px) {
+                .grid-body {
+                        background-color: lightgreen;
+                }
+                        .p1 {
+                                grid-area: 1 / span 12;
+                        }
+
+                        .p2 {
+                                grid-area: 2 / span 12;
+                        }
+
+                        .p3 {
+                                grid-area: 3 / span 12;
+                        }
+
+                        .p4 {
+                                grid-area: 4 / span 12;
+                        }
+
+                        .p5 {
+                                grid-area: 5 / span 12;
+                        }
+
+                
+        }
+</style>
+
+<body>
+        <div class="grid-body">
+                <div class="p1">
+                        <h1>india</h1>
+                </div>
+                <div class="p2">
+                        <ul>
+                                <li>The Flight</li>
+                                <li>The City</li>
+                                <li>The Island</li>
+                                <li>The Food</li>
+                        </ul>
+                </div>
+                <div class="p3">
+                        <h1>The City</h1>
+                        <p>Chania is the capital of the Chania region on the island of Crete.</p>
+                        <p>The city can be divided in two parts, the old town and the modern city.
+                                The old town is situated next to the old harbour and is the matrix
+                                around which the whole urban area was developed.</p>
+                        <p>Chania lies along the north west coast of the island Crete.</p>
+                </div>
+                <div class="p4">
+                        <h1>NOTE</h1>
+                        <ul>
+                                <li>india is world 5th lagest economey</li>
+                                <li>india has been indipandance in since 1947</li>
+                                <li>india courance name is "rupess"</li>
+                                <li>india is world 2ed larges county in population</li>
+                        </ul>
+                </div>
+                <div class="p5">
+                        <p>Resize the browser window to see how the content respond to the resizing.</p>
+                </div>
+        </div>
+</body>
+
+</html>

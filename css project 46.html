@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shutter Down Hover Effect</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .image-box {
+            position: relative;
+            overflow: hidden;
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        
+    .overlay-shape {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      clip-path: circle(0% at 50% 50%);
+      transition: clip-path 1s ease;
+    }
+
+    .image-box:hover .overlay-shape {
+      clip-path: circle(150% at 50% 50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="image-box">
+    <img src="hero.png" alt="Sample Image">
+    <div class="overlay-shape">Shape Transition</div>
+  </div>
+  </body>
+
+</html>

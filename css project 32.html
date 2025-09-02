@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pricing Table</title>
+<style>
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f7f7f7;
+    margin: 40px;
+  }
+
+  .pricing-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #c7c7c7;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 14px 18px;
+    text-align: center;
+  }
+
+  .pricing-table th:nth-child(1),
+  .pricing-table td:nth-child(1) {
+    background: #eee;
+    color: #222;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+    width: 170px;
+    border-right: 1px solid #ddd;
+  }
+
+  .pricing-table thead tr:first-child th {
+    padding: 15px 18px 18px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .header-starter {
+    background: linear-gradient(to bottom, #367b89, #24636f);
+  }
+  .header-basic {
+    background: linear-gradient(to bottom, #578212, #41660f);
+  }
+  .header-professional {
+    background: linear-gradient(to bottom, #d6a300, #a67f00);
+  }
+  .header-business {
+    background: linear-gradient(to bottom, #bc6e10, #7a4909);
+  }
+  .header-premier {
+    background: linear-gradient(to bottom, #963b3b, #652922);
+  }
+  .price {
+    font-weight: 900;
+    font-size: 20px;
+    color: #3a3a3a;
+  }
+  .price small {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .pricing-table tbody tr:nth-child(odd) {
+    background: #f9f9f9;
+  }
+
+  .info-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 6px;
+    position: relative;
+    border-radius: 50%;
+    background: #bbb;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    line-height: 14px;
+    cursor: default;
+  }
+  .info-icon:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: #333;
+    color: #fff;
+    padding: 5px 8px;
+    font-size: 11px;
+    border-radius: 3px;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .icon {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .icon.cross {
+    color: #c84242;
+  }
+  .icon.check {
+    color: #6eaf4c;
+  }
+
+  .pricing-table tfoot tr td {
+    border-top: 2px solid #ddd;
+    padding: 15px 10px;
+    background: #f1f1f1;
+  }
+  .pricing-table tfoot tr td:nth-child(1) {
+    background: #eee;
+    border: none;
+  }
+  .btn {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7px 22px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    user-select: none;
+  }
+  .btn-starter {
+    background: #367b89;
+  }
+  .btn-starter:hover {
+    background: #2d666f;
+    box-shadow: inset 0 2px 8px rgb(0 0 0 / 0.25);
+  }
+  .btn-basic {
+    background: #578212;
+  }
+  .btn-basic:hover {
+    background: #41660f;
+    box-shadow: inset 0 2px 8px rgb(0 0 0 / 0.25);
+  }
+  .btn-professional {
+    background: #d6a300;
+  }
+  .btn-professional:hover {
+    background: #a67f00;
+    box-shadow: inset 0 2px 8px rgb(0 0 0 / 0.25);
+  }
+  .btn-business {
+    background: #bc6e10;
+  }
+  .btn-business:hover {
+    background: #7a4909;
+    box-shadow: inset 0 2px 8px rgb(0 0 0 / 0.25);
+  }
+  .btn-premier {
+    background: #963b3b;
+  }
+  .btn-premier:hover {
+    background: #652922;
+    box-shadow: inset 0 2px 8px rgb(0 0 0 / 0.25);
+  }
+
+</style>
+</head>
+<body>
+<table class="pricing-table" role="table" aria-label="Pricing plans comparison">
+  <thead>
+    <tr>
+      <th scope="col">Choose a Plan</th>
+      <th scope="col" class="header-starter">Starter</th>
+      <th scope="col" class="header-basic">Basic</th>
+      <th scope="col" class="header-professional">Professional</th>
+      <th scope="col" class="header-business">Business</th>
+      <th scope="col" class="header-premier">Premier</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th><span class="price">$9</span><small> /mo.</small></th>
+      <th><span class="price">$29</span><small> /mo.</small></th>
+      <th><span class="price">$39</span><small> /mo.</small></th>
+      <th><span class="price">$49</span><small> /mo.</small></th>
+      <th><span class="price">$69</span><small> /mo.</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Disk Storage</td>
+      <td>10GB</td>
+      <td>50GB</td>
+      <td>100GB</td>
+      <td>500GB</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Monthly Bandwidth</td>
+      <td>10GB</td>
+      <td>50GB</td>
+      <td>100GB</td>
+      <td>500GB</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Domain Names</td>
+      <td>10GB</td>
+      <td>50GB</td>
+      <td>100GB</td>
+      <td>500GB</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Subdomains</td>
+      <td>10GB</td>
+      <td>50GB</td>
+      <td>100GB</td>
+      <td>500GB</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Site Builders</td>
+      <td>10GB</td>
+      <td>50GB</td>
+      <td>100GB</td>
+      <td>500GB</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Backups</td>
+      <td><span class="icon cross" >&#10006;</span></td>
+      <td><span class="icon check" >&#10004;</span></td>
+      <td><span class="icon check" >&#10004;</span></td>
+      <td><span class="icon check" >&#10004;</span></td>
+      <td><span class="icon check" >&#10004;</span></td>
+    </tr>
+    <tr>
+      <td>CPANEL</td>
+      <td>10GB</td>
+      <td>50GB</td>
+      <td>100GB</td>
+      <td>500GB</td>
+      <td>Unlimited</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-starter" type="button">Sign Up</button></td>
+      <td><button class="btn btn-basic" type="button">Sign Up</button></td>
+      <td><button class="btn btn-professional" type="button">Sign Up</button></td>
+      <td><button class="btn btn-business" type="button">Sign Up</button></td>
+      <td><button class="btn btn-premier" type="button">Sign Up</button></td>
+    </tr>
+  </tfoot>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glass Effect Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color:rgb(43, 163, 163) ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+    }
+
+    .glass-form {
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 4px 32px black;
+      width: 300px;
+    }
+
+    .glass-form h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .glass-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background:#ffffff33;
+      color: white;
+    }
+
+    .glass-form button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #ffffff33;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+
+  </style>
+</head>
+<body>
+  <form class="glass-form">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username"/>
+    <input type="password" placeholder="Password"/>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

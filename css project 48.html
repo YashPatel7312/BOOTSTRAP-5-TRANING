@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vertical Fall Shutter Hover</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #111;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    .image-box {
+      width: 100%;
+      height: 100%;
+      background: url('hero.png') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shutter {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      background: rgba(0, 0, 0, 0.9);
+      transform-origin: center top;
+      transition: transform 1s ease;
+      backface-visibility: hidden;
+      z-index: 2;
+    }
+
+    .bottom-shutter {
+      top: 50%;
+      transform-origin: center bottom;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+      background: rgba(38, 39, 39, 0.014);
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease 0.4s;
+      z-index: 1;
+    }
+
+    .container:hover .top-shutter {
+      transform: rotateY(-90deg);
+    }
+
+    .container:hover .bottom-shutter {
+      transform: rotateX(-90deg);
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="image-box">
+      <div class="shutter top-shutter"></div>
+      <div class="shutter bottom-shutter"></div>
+      <div class="overlay">Fall Over Effect</div>
+    </div>
+  </div>
+</body>
+
+</html>
